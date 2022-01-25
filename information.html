@@ -9,6 +9,13 @@
     <title>Dining007 | About Us</title>
 </head>
 <body>
+    <style>
+        .imagebanner img{
+            display: block;
+            max-width: 100%;
+            max-height: 70%;
+        }
+    </style>
     <nav class="navbar navbar-expand-md">
 	
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
@@ -32,8 +39,12 @@
         </div>
     </nav>
 
-    <div class="imagebanner" style="background-image: url(https://www.pexels.com/photo/two-clear-wine-glasses-2104568/); background-position: center top; background-size: auto; height: 460px;">
-    <img src=images/pexels-2005.jpg alt=aboutusbanner style="width:1600px;height:460px;">
+    <div class="imagebanner">
+    <picture>
+    <img srcset="images/pexels-1200.jpg 1200px"
+    sizes="(max-width: 1200px) 1200px"
+    src="images/pexels-1200.jpg" alt="aboutusbanner">
+    </picture> 
 </div>
     <!--Sofia Mäkelä made the col-thing for this site-->
     <div class="container">

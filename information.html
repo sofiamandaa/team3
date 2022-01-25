@@ -4,16 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>About Us</title>
+    <title>Dining007 | About Us</title>
 </head>
 <body>
-    <header>Stuff like logo, navbar and the image jne</header>
+    <style>
+        body{
+            background-color: rgb(221, 216, 207);
+        }
+        .imagebanner img{
+            display: block;
+            max-width: 100%;
+        }
+    </style>
+    <nav class="navbar navbar-expand-md">
+	
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <img src="images/Di.png" alt="logo" width="200px" lenght="300">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="information.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!--Sofia Mäkelä made this image banner thing-->
+    <div class="imagebanner">
+    <picture>
+    <img srcset="images/pexels-1200.jpg 100w"
+    sizes="(max-width: 1200px) 1200px"
+    src="images/pexels-1200.jpg" alt="aboutusbanner">
+    </picture> 
+</div>
+    <!--Sofia Mäkelä made the col-thing for this site-->
     <div class="container">
         <div class="row">
             <sidebar class="col-2">
 
-some content for the side bar
+    <!--some content for the side bar if needed-->
                 </sidebar>
         <div class="col-6">
         <h2>Dining007 </h2>
@@ -32,11 +72,49 @@ some content for the side bar
             </p> 
     </div>
     <rightbar class="col-2" >
- some content for right bar
+        <figure class="quote">
+            <blockquote> <!--Sofia Mäkelä made the quote thing-->
+                “Food brings people together on many different levels. It’s nourishment of the soul and body; it’s truly love.”
+            </blockquote>
+            <figcaption>
+              &mdash;<cite>Giada De Laurentiis</cite>
+            </figcaption>
+          </figure>
+          
     </rightbar>
     </div>
     
-    <footer>footer</footer>
+    <!--Janica Närhi made the footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <br>
+                (c) Team3 2022
+              </div>
+              <div class="col">
+                Dining007<br>
+                Vankanlähdentie 9<br>
+                13100 Hämeenlinna
+                <br>               
+              </div>
+              <div class="col">
+                Opening<br>
+                Mon-Fri 14-20<br>
+                Saturday 14-23<br>
+                Sunday 11-18
+                              
+              </div>
+              <div class="col">
+                Call for us:<br>
+                +358 40 123 4567<br>
+                Send a mail for us:<br>
+                example@dining007.com
+                
+              </div>
+            </div>
+          </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

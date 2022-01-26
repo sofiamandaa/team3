@@ -16,4 +16,9 @@ footer {
 .col-6, .col-2, .col-2sh{
     font-family: 'Times New Roman', Times, serif;
     color: rgb(56, 56, 56);
+    font-size: 20px;
+}
+h2{
+    color: rgb(145, 17, 236);
+    
 }

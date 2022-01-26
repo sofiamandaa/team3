@@ -9,6 +9,7 @@ body{
 footer {
     position: bottom;
     margin-bottom: 50px ;
+    border-bottom:3px solid black;
 }
 .red{
     background-color: brown;

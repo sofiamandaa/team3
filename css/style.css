@@ -10,9 +10,10 @@ footer {
     position: bottom;
     margin-bottom: 50px ;
     border-bottom:3px solid black;
-}
-.red{
-    background-color: brown;
+} 
+.one, .two, .three, .four{
+    background-color: rgb(211, 219, 223);
+    font-family: 'Times New Roman', Times, serif;
 }
 .col-6, .col-2, .col-2sh{
     font-family: 'Times New Roman', Times, serif;
@@ -20,7 +21,7 @@ footer {
     font-size: 20px;
 }
 h2{
-    color: rgb(145, 17, 236);
+    color: rgb(3, 3, 3);
     
 }
 h1{
@@ -28,3 +29,7 @@ h1{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }  
+.navbar{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}

@@ -6,14 +6,14 @@ body{
     display: block;
     max-width: 100%;
 }
-.imagebanner img{
-    display: block;
-    max-width: 100%;
-}
 footer {
     position: bottom;
     margin-bottom: 50px ;
 }
 .red{
     background-color: brown;
+}
+.col-6, .col-2, .col-2sh{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(56, 56, 56);
 }

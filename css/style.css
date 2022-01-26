@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(197, 151, 57);
+    color: darkolivegreen;
+}
+.imagebanner img{
+    display: block;
+    max-width: 100%;
+}
+.imagebanner img{
+    display: block;
+    max-width: 100%;
+}
+footer {
+    position: bottom;
+    margin-bottom: 50px ;
+}
+.red{
+    background-color: brown;
+}

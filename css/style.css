@@ -8,10 +8,11 @@ body{
 }
 footer {
     
-    position: bottom;
     border:1px solid rgb(110, 104, 104);
     margin-bottom: 100px ;
     text-align: center, left;
+    position: bottom;
+  
 }
 .one, .two, .three, .four{
     background-color: rgb(146, 146, 146);

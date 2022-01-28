@@ -8,10 +8,15 @@ body{
 }
 footer {
     
-    position: bottom;
     border:1px solid rgb(110, 104, 104);
     margin-bottom: 100px ;
     text-align: center, left;
+    position: bottom;
+  
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
 }
 .one, .two, .three, .four{
     background-color: rgb(146, 146, 146);
@@ -32,6 +37,9 @@ a:link{
 h2{
     color: rgb(3, 3, 3);
     
+}
+h3, h5, a{
+    font-family: 'Times New Roman', Times, serif;
 }
 h1{
     color: rgb(255, 0, 0);

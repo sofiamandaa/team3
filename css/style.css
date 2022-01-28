@@ -28,16 +28,16 @@
 footer {
     
     position: bottom;
-    margin-bottom: 0;
-   
-    
+    border:1px solid rgb(110, 104, 104);
+    margin-bottom: 100px ;
+    text-align: center, left;
 }
 .one, .two, .three, .four{
     background-color: rgb(146, 146, 146);
     font-family: 'Times New Roman', Times, serif;
     color: black;
     
-    
+   
 }
 a:link{
     color: black;
@@ -77,7 +77,6 @@ p{
 .navbar{
     font-family: 'Times New Roman', Times, serif;
     color: rgb(0, 0, 0);
-<<<<<<< HEAD
     display: block;
 
 }
@@ -95,6 +94,3 @@ text-align: center;
 .nav-link:hover {
     color: rgb(146, 146, 146);
 }
-=======
-}
->>>>>>> 3b71b0ba2a070e1055845edb3d15fcdb99abc092

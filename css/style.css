@@ -19,31 +19,6 @@
     }
 
 
-.navbar {
-    background-color: white;
-    color: black;
-
-  }
-
-.nav-link {
-color: rgb(0, 0, 0);
-cursor: pointer;
-margin-left: 16px;
-margin-right: auto;
-width: 100%;
-font-size: 18px;
-text-align: center;
-}
-
-.nav-link:hover {
-color: rgb(199, 199, 199);
-}
-
-.navbar-collapse {
-justify-content: flex-start;
-}
-
-
 
 .imagebanner img{
     display: block;
@@ -82,7 +57,40 @@ h1{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }  
+
+h5{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
 .navbar{
     font-family: 'Times New Roman', Times, serif;
     color: rgb(0, 0, 0);
+    display: block;
+
+}
+
+.nav-link {
+color: rgb(0, 0, 0);
+cursor: pointer;
+margin-left: 16px;
+margin-right: auto;
+width: 100%;
+font-size: 20px;
+text-align: center;
+}
+
+.nav-link:hover {
+    color: rgb(146, 146, 146);
 }

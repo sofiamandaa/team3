@@ -7,11 +7,27 @@ body{
     max-width: 100%;
 }
 footer {
+    
+    border:1px solid rgb(110, 104, 104);
+    margin-bottom: 100px ;
+    text-align: center, left;
     position: bottom;
-    margin-bottom: 50px ;
+  
 }
-.red{
-    background-color: brown;
+p{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+.one, .two, .three, .four{
+    background-color: rgb(146, 146, 146);
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    
+   
+}
+a:link{
+    color: black;
+    text-decoration: none;
 }
 .col-6, .col-2, .col-2sh{
     font-family: 'Times New Roman', Times, serif;
@@ -19,11 +35,18 @@ footer {
     font-size: 20px;
 }
 h2{
-    color: rgb(145, 17, 236);
+    color: rgb(3, 3, 3);
     
+}
+h3, h5, .section5{
+    font-family: 'Times New Roman', Times, serif;
 }
 h1{
     color: rgb(255, 0, 0);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }  
+.navbar{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}

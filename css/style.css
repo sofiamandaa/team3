@@ -77,7 +77,6 @@ p{
 .navbar{
     font-family: 'Times New Roman', Times, serif;
     color: rgb(0, 0, 0);
-<<<<<<< HEAD
     display: block;
 
 }
@@ -95,6 +94,3 @@ text-align: center;
 .nav-link:hover {
     color: rgb(146, 146, 146);
 }
-=======
-}
->>>>>>> 3b71b0ba2a070e1055845edb3d15fcdb99abc092

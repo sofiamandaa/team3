@@ -50,6 +50,7 @@ a:link{
 }
 h2{
     color: rgb(3, 3, 3);
+    font-family: 'Times New Roman', Times, serif;
     
 }
 h1{
@@ -63,10 +64,6 @@ h5{
     font-family: 'Times New Roman', Times, serif;
 }
 
-h3{
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-}
 
 p{
     color: black;

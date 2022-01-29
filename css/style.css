@@ -50,19 +50,14 @@ justify-content: flex-start;
     max-width: 100%;
 }
 
-footer {
-    
+footer {   
     position: bottom;
-    margin-bottom: 0;
-   
-    
+    margin-bottom: 0;   
 }
 .one, .two, .three, .four{
     background-color: rgb(146, 146, 146);
     font-family: 'Times New Roman', Times, serif;
-    color: black;
-    
-    
+    color: black;   
 }
 a:link{
     color: black;

@@ -19,31 +19,6 @@
     }
 
 
-.navbar {
-    background-color: white;
-    color: black;
-
-  }
-
-.nav-link {
-color: rgb(0, 0, 0);
-cursor: pointer;
-margin-left: 16px;
-margin-right: auto;
-width: 100%;
-font-size: 18px;
-text-align: center;
-}
-
-.nav-link:hover {
-color: rgb(199, 199, 199);
-}
-
-.navbar-collapse {
-justify-content: flex-start;
-}
-
-
 
 .imagebanner img{
     display: block;
@@ -52,12 +27,12 @@ justify-content: flex-start;
 
 footer {   
     position: bottom;
-    margin-bottom: 0;   
+    margin-bottom: 0;
 }
 .one, .two, .three, .four{
     background-color: rgb(146, 146, 146);
     font-family: 'Times New Roman', Times, serif;
-    color: black;   
+    color: black;
 }
 a:link{
     color: black;
@@ -68,16 +43,49 @@ a:link{
     color: rgb(56, 56, 56);
     font-size: 20px;
 }
+
 h2{
     color: rgb(3, 3, 3);
+    font-family: 'Times New Roman', Times, serif;
     
 }
+
 h1{
     color: rgb(255, 0, 0);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }  
+
+h5{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+p{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
 .navbar{
     font-family: 'Times New Roman', Times, serif;
+    background-color: white;
     color: rgb(0, 0, 0);
+    display: block;
+
+}
+
+.nav-link {
+color: rgb(0, 0, 0);
+cursor: pointer;
+margin-left: 16px;
+margin-right: auto;
+width: 100%;
+font-size: 20px;
+text-align: center;
+}
+
+.nav-link:hover {
+    color: rgb(146, 146, 146);
 }

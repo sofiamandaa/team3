@@ -52,7 +52,7 @@ h2{
 }
 
 h1{
-    color: rgb(68, 66, 68);
+    color: rgb(15, 14, 15);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }  
@@ -63,22 +63,16 @@ h5{
 }
 
 
-p{
+p, a{
     color: black;
     font-family: 'Times New Roman', Times, serif;
 }
 
+ .nav-link, .navrr{
+     color: darkred;
+ }
 
-.navbar{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    display: block;
-
-}
-
-.nav-link {
-color: rgb(0, 0, 0);
+nav, .navrr {
 cursor: pointer;
 margin-left: 16px;
 margin-right: auto;
@@ -87,7 +81,7 @@ font-size: 20px;
 text-align: center;
 }
 
-.nav-link:hover {
+.navrr:hover, .nav-link:hover {
     color: rgb(146, 146, 146);
 }
 

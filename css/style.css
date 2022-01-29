@@ -26,7 +26,7 @@
 }
 
 footer {   
-    position: bottom;
+    position: sticky;
     margin-bottom: 0; 
 }
 .one, .two, .three, .four{
@@ -72,7 +72,7 @@ p, a{
      color: darkred;
  }
 
-nav, .navrr {
+.navrr, nav {
 cursor: pointer;
 margin-left: 16px;
 margin-right: auto;

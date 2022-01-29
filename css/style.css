@@ -30,7 +30,7 @@ footer {
     margin-bottom: 0; 
 }
 .one, .two, .three, .four{
-    background-color: rgb(146, 146, 146);
+    background-color: rgb(194, 190, 190);
     font-family: 'Times New Roman', Times, serif;
     color: black;
 }
@@ -52,7 +52,7 @@ h2{
 }
 
 h1{
-    color: rgb(255, 0, 0);
+    color: rgb(68, 66, 68);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }  
@@ -89,4 +89,8 @@ text-align: center;
 
 .nav-link:hover {
     color: rgb(146, 146, 146);
+}
+
+.col-6 {
+    border-right: 0.5px solid rgb(204, 202, 202);
 }

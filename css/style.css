@@ -1,4 +1,6 @@
-    html, body {
+   /* Font, font-size and font-color by Sofia Mäkelä */
+   
+   html, body {
         height: 100%;
     }
     
@@ -69,7 +71,7 @@ p, a{
 }
 
  .nav-link, .navrr{
-     color: darkred;
+     color: rgb(81, 100, 86);
  }
 
 .navrr, nav {

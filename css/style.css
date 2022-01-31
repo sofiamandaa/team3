@@ -1,52 +1,91 @@
-body{
-    background-color: rgb(243, 242, 239);
-    color: rgb(2, 2, 2);
-}
+   /* Font, font-size and font-color by Sofia Mäkelä */
+   
+   html, body {
+        height: 100%;
+    }
+    
+    html {
+        display: table;
+        margin: auto;
+        background-color: rgb(199, 199, 199);
+    }
+    
+    body {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        max-width: 1300px;
+        height: 100%;
+        margin: 0 auto;
+        background-color: rgb(243, 243, 243)
+    }
+
+
+
 .imagebanner img{
     display: block;
     max-width: 100%;
 }
-footer {
-    
-    border:1px solid rgb(110, 104, 104);
-    margin-bottom: 100px ;
-    text-align: center, left;
-    position: bottom;
-  
-}
-p{
-    color: rgb(0, 0, 0);
-    font-family: 'Times New Roman', Times, serif;
+
+footer {   
+    position: sticky;
+    margin-bottom: 0; 
 }
 .one, .two, .three, .four{
-    background-color: rgb(146, 146, 146);
+    background-color: rgb(194, 190, 190);
     font-family: 'Times New Roman', Times, serif;
     color: black;
-    
-   
 }
 a:link{
     color: black;
     text-decoration: none;
 }
+
 .col-6, .col-2, .col-2sh{
     font-family: 'Times New Roman', Times, serif;
     color: rgb(56, 56, 56);
     font-size: 20px;
 }
+
 h2{
     color: rgb(3, 3, 3);
-    
-}
-h3, h5, a{
     font-family: 'Times New Roman', Times, serif;
 }
+
 h1{
-    color: rgb(255, 0, 0);
+    color: rgb(15, 14, 15);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
 }  
-.navbar{
+
+h5{
+    color: black;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(0, 0, 0);
+}
+
+
+p, a{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-link, .navrr{
+     color: rgb(81, 100, 86);
+ }
+
+.navrr, nav {
+cursor: pointer;
+margin-left: 16px;
+margin-right: auto;
+width: 100%;
+font-size: 20px;
+text-align: center;
+}
+
+.navrr:hover, .nav-link:hover, a:link:hover{
+    color: rgb(146, 146, 146);
+}
+/*made by Sofia Mäkelä*/
+.col-6 {
+    border-right: 0.5px solid rgb(204, 202, 202);
 }

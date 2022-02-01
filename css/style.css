@@ -1,5 +1,7 @@
    /* Font, font-size and font-color by Sofia Mäkelä */
-   
+  
+/* Html and body sections made by Tiina Moilanen */
+
    html, body {
         height: 100%;
     }
@@ -70,6 +72,7 @@ p, a{
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* Navbar made by Tiina Moilanen */
 .nav-link, .navrr{
      color: rgb(81, 100, 86);
  }

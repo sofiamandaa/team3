@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Palaute</title>
+</head>
+<body>
+<form action='../php/tallenna.php' method="post">
+  
+Nimi: <input type="text" name="nimi" value="" size="40" maxlength="40"/>
+<br>
+Miten onnistuimme asiakaspalvelussa?<br>
+<input type="radio" name="asiakaspalvelu" value="1"/>Hyvin huonosti<br>
+<input type="radio" name="asiakaspalvelu" value="2"/>Huonosti<br>
+<input type="radio" name="asiakaspalvelu" value="3"/>Keskinkertaisesti<br>
+<input type="radio" name="asiakaspalvelu" value="4"/>Hyvin<br>
+<input type="radio" name="asiakaspalvelu" value="5"/>Erittäin hyvin<br>
+Miten onnistuimme ruoassa?<br>
+<input type="checkbox" name="ruoka[]" value="1"/>Hyvin huonosti<br>
+<input type="checkbox" name="ruoka[]" value="2"/>Huonosti<br>
+<input type="checkbox" name="ruoka[]" value="3"/>Keskinkertaisesti<br>
+<input type="checkbox" name="ruoka[]" value="4"/>Hyvin<br>
+<input type="checkbox" name="ruoka[]" value="5"/>Erittäin hyvin<br>
+
+Vapaa palaute<br>
+<textarea name='Vapaa palaute' cols='50' rows='5'></textarea><br>
+
+<input type="submit" name="ok" value="Lähetä"/>
+<input type="reset" name="eiok" value="Tyhjennä"/>
+</form>
+</body>
+</html>
+
+
+
+
+

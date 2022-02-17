@@ -30,14 +30,14 @@ else{
 
 }
 
-$yhteys = mysqli_connect("localhost:82", "root", "password");
+$yhteys=mysqli_connect("db", "root", "password", "dining007");
 if (!$yhteys) {
    die("Yhteyden muodostaminen epäonnistui: " . mysqli_connect_error());
 }
-echo "Yhteys OK";
 
-$tietokanta=mysqli_select_db($yhteys, "palaute");
-if (!tietokanta) {
+
+$yhteys=mysqli_select_db($yhteys, "dining007");
+if (!$yhteys) {
    die("Tietokannan valinta epäonnistui: " . mysqli_connect_error());
 }
 echo "Tietokanta OK.";
@@ -50,6 +50,6 @@ mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 mysqli_close($yhteys);
 
-header("Location:lomake.html");
+header("Location:palautekiitos.html");
 exit;
 ?>

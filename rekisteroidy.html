@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dining007 - Rekisteröidy</title>
+</head>
+<body>
+
+<script>
+function lahetaKayttaja(lomake){
+var user=new Object();
+user.etunimi=lomake.etunimi.value;
+user.sukunimi=lomake.sukunimi.value;
+user.puhelinnro=lomake.puhelinnro.value;
+user.sposti=lomake.sposti.value;
+user.katuosoite=lomake.katuosoite.value;
+user.postinumero=lomake.postinumero.value;
+user.postitoimipaikka=lomake.postitoimipaikka.value;
+user.ika=lomake.ika.value;
+user.kayttajatunnus=lomake.kayttajatunnus.value;
+user.salasana=lomake.salasana.value;
+var jsonUser=JSON.stringify(user);
+
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("result").innerHTML = this.reponseText;
+}
+};
+xmlhttp.open("POST", "../php/rekisteroidyajax.php", true);
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.send("user=" + jsoUser);
+}
+</script>
+
+<h2>Täytä tiedot</h2>
+<form id='userLomake'>
+Etunimi: <input type='text' name='etunimi' value=''><br>
+Sukunimi: <input type='text' name='sukunimi' value=''><br>
+Puhelinnumero: <input type='text' name='puhelinro' value=''><br>
+Sähköpostiosoite: <input type='text' name='sposti' value=''><br>
+Katuosoite: <input type='text' name='katuosoite' value=''><br>
+Postinumero: <input type='text' name='postinumero' value=''><br>
+Postitoimipaikka: <input type='text' name='postitoimipaikka' value=''><br>
+Ikä: <input type='text' name='ika' value=''><br>
+Käyttäjätunnus: <input type='text' name='kayttajatunnus' value=''><br>
+Salasana: <input type='password' name='salasana' value=''><br>
+<input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'>
+<input type='reset' name='tyhjenna' value='Tyhjennä'>
+
+</form>
+
+<p id='result'>
+</p>
+
+</body>
+</html>

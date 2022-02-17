@@ -22,7 +22,7 @@ catch(Exception $e){
 $sql="insert into kayttaja (id, etunimi, sukunimi, puhelinnro, sposti, kayttajatunnus, salasana, katuosoite, postinumero, postitoimipaikka, ika) values(?, ?, ?, ?, ?, ?, SHA2(?, 256), ?, ?, ?, ?)";
 try{
     $stmt=mysqli_prepare($yhteys, $sql);
-    mysqli_stmt_bind_param($stmt, 'ississssssi', $user->id, $user->etunimi, $user->sukunimi, $user->puhelinnro, $user->sposti, $user->kayttajatunnus, $user->salasana, $user->katuosoite, $user->postinumero, $user->postitoimipaikka, $user->ika);
+    mysqli_stmt_bind_param($stmt, 'ississssisi', $user->id, $user->etunimi, $user->sukunimi, $user->puhelinnro, $user->sposti, $user->kayttajatunnus, $user->salasana, $user->katuosoite, $user->postinumero, $user->postitoimipaikka, $user->ika);
     mysqli_stmt_execute($stmt);
     mysqli_close($yhteys);
     print $json;

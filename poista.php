@@ -12,7 +12,7 @@ try{
     $yhteys=mysqli_connect("db", "root", "password", "dining007");
 }
 catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
+    header("Location:./yhteysvirhe.html");
     exit;
 }
 $sql="delete from palaute where id=?";

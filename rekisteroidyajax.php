@@ -13,8 +13,7 @@ try{
     $yhteys=mysqli_connect("db", "root", "password", "dining007");
 }
 catch(Exception $e){
-    print "Yhteysvirhe";
-    exit;
+    include "../html/yhteysvirhe.html";
 }
 
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat

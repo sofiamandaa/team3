@@ -36,15 +36,9 @@ if (!$yhteys) {
 }
 
 
-$yhteys=mysqli_select_db($yhteys, "dining007");
-if (!$yhteys) {
-   die("Tietokannan valinta epäonnistui: " . mysqli_connect_error());
-}
-echo "Tietokanta OK.";
-
-$sql="insert into palaute(nimi, asiakaspalvelu, ruoka, Vapaapalaute) values(?, ?, ?, ?)";
+$sql="insert into palaute3(nimi, asiakaspalvelu, ruoka, Vapaapalaute) values(?, ?, ?, ?)";
 $stmt=mysqli_prepare($yhteys, $sql);
-mysqli_stmt_bind_param($stmt, 'siis', $nimi, $asiakaspalvelu, $ruoka, $Vapaapalaute);
+mysqli_stmt_bind_param($stmt, 'ssss', $nimi, $asiakaspalvelu, $ruoka, $Vapaapalaute);
 mysqli_stmt_execute($stmt);
 
 mysqli_stmt_close($stmt);

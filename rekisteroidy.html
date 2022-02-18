@@ -20,31 +20,40 @@ user.ika=lomake.ika.value;
 user.kayttajatunnus=lomake.kayttajatunnus.value;
 user.salasana=lomake.salasana.value;
 var jsonUser=JSON.stringify(user);
-
 xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
-document.getElementById("result").innerHTML = this.reponseText;
+    if (this.responseText.trim() == "kiitos")
+    {
+        window.location.assign("./kiitos.html");
+    }
+    else if (this.responseText.trim() == "yhteysvirhe")
+    {
+        window.location.assign("./yhteysvirhe.html");
+    }
+    else {
+        document.getElementById("result").innerHTML = this.responseText;
+    }
+
 }
 };
 xmlhttp.open("POST", "./rekisteroidyajax.php", true);
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xmlhttp.send("user=" + jsoUser);
+xmlhttp.send("user=" + jsonUser);
 }
 </script>
-
 <h2>Täytä tiedot</h2>
 <form id='userLomake'>
-Etunimi: <input type='text' name='etunimi' value=''><br>
-Sukunimi: <input type='text' name='sukunimi' value=''><br>
-Puhelinnumero: <input type='text' name='puhelinro' value=''><br>
-Sähköpostiosoite: <input type='text' name='sposti' value=''><br>
-Katuosoite: <input type='text' name='katuosoite' value=''><br>
-Postinumero: <input type='text' name='postinumero' value=''><br>
-Postitoimipaikka: <input type='text' name='postitoimipaikka' value=''><br>
-Ikä: <input type='text' name='ika' value=''><br>
-Käyttäjätunnus: <input type='text' name='kayttajatunnus' value=''><br>
-Salasana: <input type='password' name='salasana' value=''><br><br>
+Etunimi: <input type='text' name='etunimi' value='joo'><br>
+Sukunimi: <input type='text' name='sukunimi' value='joo'><br>
+Puhelinnumero: <input type='text' name='puhelinnro' value='123'><br>
+Sähköpostiosoite: <input type='text' name='sposti' value='joo'><br>
+Katuosoite: <input type='text' name='katuosoite' value='joo'><br>
+Postinumero: <input type='text' name='postinumero' value='123'><br>
+Postitoimipaikka: <input type='text' name='postitoimipaikka' value='joo'><br>
+Ikä: <input type='text' name='ika' value='123'><br>
+Käyttäjätunnus: <input type='text' name='kayttajatunnus' value='joo'><br>
+Salasana: <input type='password' name='salasana' value='joojoo'><br><br>
 <input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'>
 <input type='reset' name='tyhjenna' value='Tyhjennä'>
 

@@ -14,3 +14,4 @@ while ($rivi=mysqli_fetch_object($tulos)){
 print "</ol>";
 mysqli_close($yhteys);
 ?>
+<p>Haluatko antaa palautetta? <a href='./kirjaudu.html'>Kirjaudu sisään</a>

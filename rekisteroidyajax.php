@@ -28,7 +28,7 @@ try{
     mysqli_close($yhteys);
    // print $json;
     
-    print "kiitos";
+    print "kirjaudu";
 }
 catch(Exception $e){
     print "Tunnus jo olemassa tai muu virhe!";

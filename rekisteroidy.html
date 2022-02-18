@@ -50,9 +50,9 @@ var jsonUser=JSON.stringify(user);
 xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
-    if (this.responseText.trim() == "kiitos")
+    if (this.responseText.trim() == "kirjaudu")
     {
-        window.location.assign("./kiitos.html");
+        window.location.assign("./kirjaudu.html");
     }
     else if (this.responseText.trim() == "yhteysvirhe")
     {

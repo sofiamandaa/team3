@@ -13,7 +13,7 @@ try{
     $yhteys=mysqli_connect("db", "root", "password", "dining007");
 }
 catch(Exception $e){
-    include "../html/yhteysvirhe.html";
+    include "./yhteysvirhe.html";
 }
 
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
@@ -26,7 +26,7 @@ try{
     mysqli_close($yhteys);
     print $json;
     
-    include "../html/kiitos.html";
+    include "./kiitos.html";
 }
 catch(Exception $e){
     print "Tunnus jo olemassa tai muu virhe!";

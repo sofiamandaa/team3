@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dining007 - Rekisteröidy</title>
+<title>Dining007 | Sign Up</title>
 </head>
 <body>
 
@@ -27,7 +27,7 @@ if (this.readyState == 4 && this.status == 200) {
 document.getElementById("result").innerHTML = this.reponseText;
 }
 };
-xmlhttp.open("POST", "../php/rekisteroidyajax.php", true);
+xmlhttp.open("POST", "./rekisteroidyajax.php", true);
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xmlhttp.send("user=" + jsoUser);
 }
@@ -44,7 +44,7 @@ Postinumero: <input type='text' name='postinumero' value=''><br>
 Postitoimipaikka: <input type='text' name='postitoimipaikka' value=''><br>
 Ikä: <input type='text' name='ika' value=''><br>
 Käyttäjätunnus: <input type='text' name='kayttajatunnus' value=''><br>
-Salasana: <input type='password' name='salasana' value=''><br>
+Salasana: <input type='password' name='salasana' value=''><br><br>
 <input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'>
 <input type='reset' name='tyhjenna' value='Tyhjennä'>
 

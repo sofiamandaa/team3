@@ -25,14 +25,14 @@ try{
     //Valmistellaan sql-lause
     $stmt=mysqli_prepare($yhteys, $sql);
     //Sijoitetaan muuttujat oikeisiin paikkoihin
-    mysqli_stmt_bind_param($stmt, 'ss', $user->tunnus, $user->salasana);
+    mysqli_stmt_bind_param($stmt, 'ss', $user->kayttajatunnus, $user->salasana);
     //Suoritetaan sql-lause
     mysqli_stmt_execute($stmt);
     //Koska luetaan prepared statementilla, tulos haetaan
     //metodilla mysqli_stmt_get_result($stmt);
     $tulos=mysqli_stmt_get_result($stmt);
     if ($rivi=mysqli_fetch_object($tulos)){
-        $_SESSION["kayttaja"]="$rivi->tunnus";
+        $_SESSION["asiakas"]="$rivi->kayttajatunnus";
         print "ok";
         exit;
     }
@@ -54,7 +54,7 @@ function tarkistaJson($json){
         return false;
     }
     $user=json_decode($json, false);
-    if (empty($user->tunnus) || empty($user->salasana)){
+    if (empty($user->kayttajatunnus) || empty($user->salasana)){
         return false;
     }
     return $user;

@@ -16,7 +16,7 @@
 <script>
 function lahetaKayttaja(lomake){
 	var user=new Object();
-	user.tunnus=lomake.tunnus.value;
+	user.kayttajatunnus=lomake.kayttajatunnus.value;
 	user.salasana=lomake.salasana.value;
 	var jsonUser=JSON.stringify(user);
 	
@@ -41,7 +41,7 @@ function lahetaKayttaja(lomake){
 <h2>Kirjaudu sisään</h2>
 <p>Ole hyvä ja syötä alle käyttäjätunnus ja salasana kirjautuaksesi sisään.</p>
 <form id='userlomake'>
-<b>Käyttäjätunnus: </b> <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'><br>
+<b>Käyttäjätunnus: </b> <input type='text' name='kayttajatunnus' value='' placeholder='Käyttäjätunnus...'><br>
 <b>Salasana: </b> <input type='password' name='salasana' value='' placeholder='Salasana...'><br>
 <input type='button' name='ok' value='Kirjaudu' onclick='lahetaKayttaja(this.form);'><br>
 <input type="reset" class="btn btn-secondary ml-2" value='Nollaa'><br>

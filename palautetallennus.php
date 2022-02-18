@@ -1,4 +1,4 @@
-
+Kiitos palautteesta!
 
 <?php 
 $nimi="";

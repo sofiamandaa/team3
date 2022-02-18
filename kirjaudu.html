@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Kirjaudu sisään</title>
+<title>Dining007 | Kirjaudu sisään</title>
 <style>
 	body{
 		 background-color: rgb(243, 243, 243);
@@ -24,14 +24,14 @@ function lahetaKayttaja(lomake){
 	xmlhttp.onreadystatechange = function() {
 	  if (this.readyState == 4 && this.status == 200) {
 		    if (this.responseText=="ok"){
-		    	window.location.assign("../team3/palautelomake.html");
+		    	window.location.assign("./palautelomake.html");
 		    }
 		    else{
 			    document.getElementById("result").innerHTML = this.responseText;
 		    }
 	  }
 	};
-	xmlhttp.open("POST", "../team3/kirjauduajax.php", true);
+	xmlhttp.open("POST", "./kirjauduajax.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("user=" + jsonUser);	
 }

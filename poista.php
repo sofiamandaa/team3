@@ -4,7 +4,7 @@ mysqli_report(MYSQLI_REPORT_ERROR ^ MYSQLI_REPORT_STRICT);
 $poistettava=isset($_GET["poistettava"]) ? $_GET["poistettava"] : 0;
 
 if (empty($poistettava)){
-    header("Location:../team3/palautetallennus.php");
+    header("Locatio:./luepalaute.php");
     exit;
 }
 
@@ -12,7 +12,7 @@ try{
     $yhteys=mysqli_connect("db", "root", "password", "dining007");
 }
 catch(Exception $e){
-    header("Location:../team3/yhteysvirhe.html");
+    header("Location:./yhteysvirhe.html");
     exit;
 }
 $sql="delete from palaute where id=?";
@@ -25,5 +25,5 @@ mysqli_stmt_execute($stmt);
 
 mysqli_close($yhteys);
 
-header("Location:../team3/palautetallennus.php");
+header("Location:./luepalaute.php");
 ?>

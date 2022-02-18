@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kirjaudu sisään</title>
+<style>
+	body{
+		 background-color: rgb(243, 243, 243);
+		 text-align: center;
+		  padding-top: 40px;
+		
+		}
+</style>
+</head>
+<body>
+<script>
+function lahetaKayttaja(lomake){
+	var user=new Object();
+	user.tunnus=lomake.tunnus.value;
+	user.salasana=lomake.salasana.value;
+	var jsonUser=JSON.stringify(user);
+	
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+		    if (this.responseText=="ok"){
+		    	window.location.assign("../team3/palautelomake.html");
+		    }
+		    else{
+			    document.getElementById("result").innerHTML = this.responseText;
+		    }
+	  }
+	};
+	xmlhttp.open("POST", "../team3/kirjauduajax.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("user=" + jsonUser);	
+}
+</script>
+
+
+<h2>Kirjaudu sisään</h2>
+<p>Ole hyvä ja syötä alle käyttäjätunnus ja salasana kirjautuaksesi sisään.</p>
+<form id='userlomake'>
+<b>Käyttäjätunnus: </b> <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'><br>
+<b>Salasana: </b> <input type='password' name='salasana' value='' placeholder='Salasana...'><br>
+<input type='button' name='ok' value='Kirjaudu' onclick='lahetaKayttaja(this.form);'><br>
+<input type="reset" class="btn btn-secondary ml-2" value='Nollaa'><br>
+
+<p>Eikö sinulla ole käyttäjää? <a href="rekisteroidy.html">Rekisteröidy täältä</a>.</p>
+</form>
+
+
+</body>
+</html>

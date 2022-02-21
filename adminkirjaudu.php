@@ -12,14 +12,14 @@ mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 
 try{
     $yhteys=mysqli_connect("db", "root", "password", "dining007");
-	header('location:./poista.php');
+	//header('location:./poista.php');
 }
 catch(Exception $e){
     print "Yhteysvirhe";
     exit;
 }
 
-//TehdÃ¤Ã¤n sql-lause, jossa kysymysmerkeillÃ¤ osoitetaan paikat
+//Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
 //joihin laitetaan muuttujien arvoja
 $sql="select * from admin where tunnus=? and salasana=SHA2(?, 256)";
 try{
@@ -33,7 +33,7 @@ try{
     //metodilla mysqli_stmt_get_result($stmt);
     $tulos=mysqli_stmt_get_result($stmt);
     if ($rivi=mysqli_fetch_object($tulos)){
-        $_SESSION["kayttaja"]="$rivi->tunnus";
+        $_SESSION["admin"]="$rivi->tunnus";
         print "ok";
         exit;
     }

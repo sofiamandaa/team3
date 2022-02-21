@@ -9,7 +9,12 @@
 <style>
 	body{
 		 text-align: center;
+		 width: 1300px;
+		 font-family: 'Times New Roman', Times, serif;
 		}
+	button{
+		border-top: 30px;
+	}
 </style>
 </head>
 <body>
@@ -63,12 +68,14 @@ function lahetaKayttaja(lomake){
 
 <h2>Kirjaudu sisään</h2>
 <p>Ole hyvä ja syötä alle käyttäjätunnus ja salasana kirjautuaksesi sisään.</p>
+<p>&#160</p>
 <form id='userlomake'>
+<p>
 <b>Käyttäjätunnus: </b> <input type='text' name='kayttajatunnus' value='' placeholder='Käyttäjätunnus...'><br>
-<b>Salasana: </b> <input type='password' name='salasana' value='' placeholder='Salasana...'><br>
-<input type='button' name='ok' value='Kirjaudu' onclick='lahetaKayttaja(this.form);'><br>
+<b>Salasana: </b> <input type='password' name='salasana' value='' placeholder='Salasana...'></p><br>
+<input type='button' name='ok' value='Kirjaudu' onclick='lahetaKayttaja(this.form);'>
 <input type="reset" name="tyhjenna" value='Nollaa'>
-
+<p>&#160</p>
 <p>Eikö sinulla ole käyttäjää? <a href="rekisteroidy.html">Rekisteröidy täältä</a>.</p>
 </form>
 

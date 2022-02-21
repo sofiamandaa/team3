@@ -7,7 +7,7 @@
     <meta name="description" content="Dining007 restaurant About Us">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Dining007 | About Us</title>
+    <title>Dining007 | Feedback</title>
 </head>
 <body>
     <!--Sofia Mäkelä made the "About Us/Information" -page-->

@@ -12,7 +12,7 @@ mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 
 try{
     $yhteys=mysqli_connect("db", "root", "password", "dining007");
-	//header('location:./poista.php');
+	//header('location:./admin.php');
 }
 catch(Exception $e){
     print "Yhteysvirhe";

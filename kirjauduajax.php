@@ -43,7 +43,7 @@ try{
 catch(Exception $e){
     
     print "Jokin meni vikaan. Yritä uudelleen.";
- 
+    
 }
 ?>
 

@@ -19,14 +19,14 @@ catch(Exception $e){
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
 //joihin laitetaan muuttujien arvoja
 $sql="insert into asiakas (etunimi, sukunimi, puhelinnro, sposti, kayttajatunnus, ".
-"salasana, katuosoite, postinumero, postitoimipaikka, ika) values(?, ?, ?, ?, ?, SHA2(?, 256), ?, ?, ?, ?)";
+    "salasana, katuosoite, postinumero, postitoimipaikka, ika) values(?, ?, ?, ?, ?, SHA2(?, 256), ?, ?, ?, ?)";
 try{
     $stmt=mysqli_prepare($yhteys, $sql);
-    mysqli_stmt_bind_param($stmt, 'ssissssisi', $user->etunimi, $user->sukunimi, $user->puhelinnro, $user->sposti, $user->kayttajatunnus, 
-    $user->salasana, $user->katuosoite, $user->postinumero, $user->postitoimipaikka, $user->ika);
+    mysqli_stmt_bind_param($stmt, 'ssissssisi', $user->etunimi, $user->sukunimi, $user->puhelinnro, $user->sposti, $user->kayttajatunnus,
+        $user->salasana, $user->katuosoite, $user->postinumero, $user->postitoimipaikka, $user->ika);
     mysqli_stmt_execute($stmt);
     mysqli_close($yhteys);
-   // print $json;
+    // print $json;
     
     print "kirjaudu";
 }

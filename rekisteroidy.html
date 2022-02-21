@@ -8,6 +8,24 @@
 </head>
 <body>
 
+  <style>
+  body{
+       text-align: center;
+      }
+
+      h2{
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      p{
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      body{
+        width: 1300px;
+      }
+  </style>
+
         <!--Tiina Moilanen made nav class-->
    <nav class="navbar navbar-expand-md navbar">
        
@@ -69,8 +87,9 @@ xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xmlhttp.send("user=" + jsonUser);
 }
 </script>
-<h2>Täytä tiedot</h2>
+<h2>Täytä tiedot</h2><br>
 <form id='userLomake'>
+  <p>
 Etunimi: <input type='text' name='etunimi' value=''><br>
 Sukunimi: <input type='text' name='sukunimi' value=''><br>
 Puhelinnumero: <input type='text' name='puhelinnro' value=''><br>
@@ -80,7 +99,7 @@ Postinumero: <input type='text' name='postinumero' value=''><br>
 Postitoimipaikka: <input type='text' name='postitoimipaikka' value=''><br>
 Ikä: <input type='text' name='ika' value=''><br>
 Käyttäjätunnus: <input type='text' name='kayttajatunnus' value='''><br>
-Salasana: <input type='password' name='salasana' value=''><br><br>
+Salasana: <input type='password' name='salasana' value=''></p><br>
 <input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'>
 <input type='reset' name='tyhjenna' value='Tyhjennä'>
 

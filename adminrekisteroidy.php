@@ -25,8 +25,8 @@ try{
     mysqli_stmt_execute($stmt);
     mysqli_close($yhteys);
     // print $json;
-    
-    print "kirjaudu";
+    header("Location:./adminkirjaudu.html");
+    //print "kirjaudu";
 }
 catch(Exception $e){
     print "Tunnus jo olemassa tai muu virhe!";

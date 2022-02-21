@@ -59,7 +59,7 @@ function lahetaKayttaja(lomake){
 		    }
 	  }
 	};
-	xmlhttp.open("POST", "./adminkirjaudu.php", true);
+	xmlhttp.open("POST", "./adminkirjaudu.html", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("user=" + jsonUser);	
 }

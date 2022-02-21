@@ -1,5 +1,4 @@
 Kiitos palautteesta!
-
 <?php 
 $nimi="";
 if (isset($_POST["nimi"])){

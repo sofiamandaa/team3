@@ -14,7 +14,9 @@ catch(Exception $e){
 $tulos=mysqli_query($yhteys, "select * from palaute");
 print "<ol>";
 while ($rivi=mysqli_fetch_object($tulos)){
-    print "<li>$rivi->asiakaspalvelu<br> $rivi->ruoka<br> $rivi->Vapaapalaute<br>";
+    print "Asiakaspalvelu: $rivi->asiakaspalvelu<br>";
+    print "Ruoka: $rivi->ruoka<br>";
+    print "Vapaa palaute: $rivi->Vapaapalaute<br><br>";
 }
 print "</ol>";
 mysqli_close($yhteys);

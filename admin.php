@@ -28,15 +28,15 @@ $tulos=mysqli_query($yhteys, "select * from palaute");
 
 print "<ol>";
 while ($rivi=mysqli_fetch_object($tulos)){
-    print "<li>$rivi->nimi $rivi->asiakaspalvelu $rivi->ruoka $rivi->vapaapalaute"."
+    print "<li>$rivi->nimi $rivi->asiakaspalvelu $rivi->ruoka"."
     <a href='./luepalaute.php?poistettava=$rivi->nimi'>Poista</a></li>";
 }
 print "</ol>";
 
 $stmt=mysqli_prepare($yhteys, $sql);
-//Sijoitetaan muuttujat oikeisiin paikkoihin
+Sijoitetaan muuttujat oikeisiin paikkoihin
 mysqli_stmt_bind_param($stmt, 'i', $poistettava);
-//Suoritetaan sql-lause
+Suoritetaan sql-lause
 mysqli_stmt_execute($stmt);
 
 mysqli_close($yhteys);

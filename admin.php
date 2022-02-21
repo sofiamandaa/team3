@@ -5,6 +5,7 @@ $poistettava=isset($_GET["poistettava"]) ? $_GET["poistettava"] : 0;
 
 if (empty($poistettava)){
     header("Locatio:./luepalaute.php");
+    header("Location:./luepalaute.php");
     exit;
 }
 

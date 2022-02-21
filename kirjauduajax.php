@@ -6,13 +6,6 @@ if (!($user=tarkistaJson($json))){
     print "Täytä kaikki kentät";
     exit;
 }
-if ($käyttäjätunnus="admin" && $salasana="password"){
-    header('location:./admin.php');
-}
-else{
-    header('location:./palautelomake.html');
-    exit;
-}
 
 mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 // mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);

@@ -83,4 +83,12 @@ function getUserById($id){
 	$user = mysqli_fetch_assoc($result);
 	return $user;
 }
+function isAdmin()
+{
+	if (isset($_SESSION['user']) && $_SESSION['user']['kayttaja_tyyppi'] == 'admin' ) {
+		return true;
+	}else{
+		return false;
+	}
+}
 ?>

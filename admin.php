@@ -29,7 +29,7 @@ $tulos=mysqli_query($yhteys, "select * from palaute");
 print "<ol>";
 while ($rivi=mysqli_fetch_object($tulos)){
     print "<li>$rivi->nimi $rivi->asiakaspalvelu $rivi->ruoka $rivi->vapaapalaute"."
-    <a href='./luepalaute.php ? modify=$rivi->id'>Poista</a></li>";
+    <a href='./luepalaute.php?poistettava=$rivi->nimi'>Poista</a></li>";
 }
 print "</ol>";
 

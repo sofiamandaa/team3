@@ -4,7 +4,7 @@ mysqli_report(MYSQLI_REPORT_ERROR ^ MYSQLI_REPORT_STRICT);
 $poistettava=isset($_GET["poistettava"]) ? $_GET["poistettava"] : 0;
 
 if (empty($poistettava)){
-    header("Locatio:./luepalaute.php");
+    header("Location:./luepalaute.php");
     exit;
 }
 
@@ -29,7 +29,7 @@ $tulos=mysqli_query($yhteys, "select * from palaute");
 print "<ol>";
 while ($rivi=mysqli_fetch_object($tulos)){
     print "<li>$rivi->nimi $rivi->asiakaspalvelu $rivi->ruoka $rivi->vapaapalaute"."
-    <a href='./luepalaute.php ? modify=$rivi->id'>Poista</a></li>";
+    <a href='./luepalaute.php?poistettava=$rivi->nimi'>Poista</a></li>";
 }
 print "</ol>";
 

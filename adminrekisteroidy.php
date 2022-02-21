@@ -21,7 +21,7 @@ catch(Exception $e){
 $sql="insert into admin (tunnus, salasana) values(?, SHA2(?, 256))";
 try{
     $stmt=mysqli_prepare($yhteys, $sql);
-    mysqli_stmt_bind_param($stmt, 'ss',$user->tunnus, $user->salasana);
+    mysqli_stmt_bind_param($stmt, 'ss', $user->tunnus, $user->salasana);
     mysqli_stmt_execute($stmt);
     mysqli_close($yhteys);
     // print $json;
@@ -40,8 +40,8 @@ function tarkistaJson($json){
         return false;
     }
     $user=json_decode($json, false);
-   // if (empty(empty($user->tunnus) || empty($user->salasana)){
-    //    return false;
+    //if (empty(empty($user->tunnus) || empty($user->salasana)){
+    //  return false;
     //}
     return $user;
 }

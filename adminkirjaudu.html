@@ -44,7 +44,7 @@
 <script>
 function lahetaKayttaja(lomake){
 	var user=new Object();
-	user.kayttajatunnus=lomake.kayttajatunnus.value;
+	user.tunnus=lomake.tunnus.value;
 	user.salasana=lomake.salasana.value;
 	var jsonUser=JSON.stringify(user);
 	
@@ -59,7 +59,7 @@ function lahetaKayttaja(lomake){
 		    }
 	  }
 	};
-	xmlhttp.open("POST", "./adminkirjaudu.html", true);
+	xmlhttp.open("POST", "./adminkirjaudu.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("user=" + jsonUser);	
 }
@@ -74,7 +74,7 @@ function lahetaKayttaja(lomake){
 <b>Tunnus: </b> <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'><br>
 <b>Salasana: </b> <input type='password' name='salasana' value='' placeholder='Salasana...'></p><br>
 <input type='button' name='ok' value='Kirjaudu' onclick='lahetaKayttaja(this.form);'>
-<input type="reset" name="tyhjenna" value='Nollaa'>
+<input type='reset' name='tyhjenna' value='Nollaa'>
 <p>&#160</p>
 <p><a href="adminrekisteroidy.html">Rekisteröidy täältä</a>.</p>
 </form>

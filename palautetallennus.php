@@ -1,5 +1,5 @@
 Kiitos palautteesta!
-
+<a class="navrr" href="index.html">Palaa etusivulle</a>
 <?php 
 $nimi="";
 if (isset($_POST["nimi"])){

@@ -25,8 +25,8 @@ try{
     mysqli_stmt_execute($stmt);
     mysqli_close($yhteys);
     // print $json;
-    header("Location:./adminkirjaudu.html");
-    //print "kirjaudu";
+   // header("Location:./adminkirjaudu.html");
+    print "admin";
 }
 catch(Exception $e){
     print "Tunnus jo olemassa tai muu virhe!";
@@ -40,9 +40,9 @@ function tarkistaJson($json){
         return false;
     }
     $user=json_decode($json, false);
-    //if (empty(empty($user->tunnus) || empty($user->salasana)){
-    //  return false;
-    //}
+    if (empty($user->tunnus) || empty($user->salasana)){
+      return false;
+    }
     return $user;
 }
 ?>

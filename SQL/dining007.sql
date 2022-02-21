@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 16, 2022 at 12:29 PM
+-- Generation Time: Feb 20, 2022 at 01:25 PM
 -- Server version: 8.0.26
 -- PHP Version: 8.0.15
 
@@ -38,8 +38,40 @@ CREATE TABLE `asiakas` (
   `katuosoite` varchar(200) DEFAULT NULL,
   `postinumero` int NOT NULL,
   `postitoimipaikka` varchar(100) DEFAULT NULL,
-  `ika` int NOT NULL
+  `ika` int NOT NULL,
+  `kayttaja_tyyppi` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `asiakas`
+--
+
+INSERT INTO `asiakas` (`id`, `etunimi`, `sukunimi`, `puhelinnro`, `sposti`, `kayttajatunnus`, `salasana`, `katuosoite`, `postinumero`, `postitoimipaikka`, `ika`, `kayttaja_tyyppi`) VALUES
+(1, 'joo', 'joo', 123, 'joo', 'joo', 'a2e882c6adfe06c527ff0c58d4cf8919513d11e933694e3e5120873682158fc8', 'joo', 123, 'joo', 123, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `palaute`
+--
+
+CREATE TABLE `palaute` (
+  `nimi` varchar(40) NOT NULL,
+  `asiakaspalvelu` varchar(200) NOT NULL,
+  `ruoka` varchar(200) NOT NULL,
+  `Vapaapalaute` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `palaute`
+--
+
+INSERT INTO `palaute` (`nimi`, `asiakaspalvelu`, `ruoka`, `Vapaapalaute`) VALUES
+('', '', '', ''),
+('', '', '', ''),
+('', '', '', ''),
+('', '', '', ''),
+('Hessu', 'Hyvin.', 'Hyvää', 'Hieno paikka.');
 
 --
 -- Indexes for dumped tables
@@ -59,39 +91,7 @@ ALTER TABLE `asiakas`
 -- AUTO_INCREMENT for table `asiakas`
 --
 ALTER TABLE `asiakas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `dining007`
---
-
--- --------------------------------------------------------
-
---
--- Rakenne taululle `palaute`
---
-
-CREATE TABLE `palaute` (
-  `nimi` varchar(40) NOT NULL,
-  `asiakaspalvelu` varchar(200) NOT NULL,
-  `ruoka` varchar(200) NOT NULL,
-  `Vapaapalaute` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

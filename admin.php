@@ -16,4 +16,5 @@ while ($rivi=mysqli_fetch_object($tulos)){
 }
 print "</ol>";
 
-mysql_close($yhtetys)
+mysql_close($yhteys);
+?>

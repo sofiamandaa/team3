@@ -9,8 +9,6 @@
 <style>
 	body{
 		 text-align: center;
-		  padding-top: 40px;
-		
 		}
 </style>
 </head>
@@ -69,7 +67,7 @@ function lahetaKayttaja(lomake){
 <b>Käyttäjätunnus: </b> <input type='text' name='kayttajatunnus' value='' placeholder='Käyttäjätunnus...'><br>
 <b>Salasana: </b> <input type='password' name='salasana' value='' placeholder='Salasana...'><br>
 <input type='button' name='ok' value='Kirjaudu' onclick='lahetaKayttaja(this.form);'><br>
-<input type="reset" class="btn btn-secondary ml-2" value='Nollaa'><br>
+<input type="reset" name="tyhjenna" value='Nollaa'>
 
 <p>Eikö sinulla ole käyttäjää? <a href="rekisteroidy.html">Rekisteröidy täältä</a>.</p>
 </form>

@@ -20,7 +20,6 @@ catch(Exception $e){
 
 //Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
 //joihin laitetaan muuttujien arvoja
-function login(){
 $sql="select * from asiakas where kayttajatunnus=? and salasana=SHA2(?, 256)";
 try{
     //Valmistellaan sql-lause
@@ -37,23 +36,6 @@ try{
         print "ok";
         exit;
     }
-    $query = "SELECT * FROM asiakas WHERE kayttajatunnus='$kayttajatunnus' AND salasana='$salasana' LIMIT 1";
-		$results = mysqli_query($db, $query);
-    if (mysqli_num_rows($results) == 1) { // user found
-        // check if user is admin or user
-        $logged_in_user = mysqli_fetch_assoc($results);
-        if ($logged_in_user['kayttaja_tyyppi'] == 'admin') {
-
-            $_SESSION['asiakas'] = $logged_in_user;
-            $_SESSION['success']  = "You are now logged in";
-            header('location:./poista.php');		  
-        }else{
-            $_SESSION['asiakas'] = $logged_in_user;
-            $_SESSION['success']  = "You are now logged in";
-
-            header('location:./palautelomake.html');
-        }
-    }
     //Suljetaan tietokantayhteys
     mysqli_close($yhteys);
     //print $json;
@@ -61,7 +43,7 @@ try{
 catch(Exception $e){
     
     print "Jokin meni vikaan. Yritä uudelleen.";
- 
+    
 }
 ?>
 

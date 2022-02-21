@@ -20,7 +20,7 @@
 		<h2>Admin - create user</h2>
 	</div>
 	
-	<form method="post" action="rekisteroidyajax.php">
+	<form method="post" action="./rekisteroidyajax.php">
 
 		<?php echo display_error(); ?>
 

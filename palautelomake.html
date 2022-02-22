@@ -34,10 +34,11 @@
                   <a class="navrr" href="palautelomake.html">Feedback</a>
                 </li>
 		    <li class="nav-item">
-                    <a class="navrr" href="rekisteroidy.html">Sign Up</a>
+                    
                 </li>
             </ul>
-    </div>
+</div>
+
     </nav>
     <div class="imagebanner">
         <picture>
@@ -47,13 +48,12 @@
         style="width: 100%; height: 300px;">
         </picture> 
     </div>
-    <div class="container"> </div>
-    <div class="row"> 
-        
+        <!--alla oleva koodi lähettää lomakkeen tiedot palautetallennus.php ja luepalaute.php sivuille-->
         <div class="col-6">
     <form action='/palautetallennus.php' method="post">
     <form action='/luepalaute.php' method="post">
   
+        <!--alla oleva koodi sisältää laatikot mihin syötetään palaute-->
     Nimi: <input type="text" name="nimi" value="" size="60" maxlength="40" width="400"/>
     <br>
     Miten onnistuimme asiakaspalvelussa?<br>
@@ -63,11 +63,12 @@
 
     Vapaa palaute<br>
     <textarea name='vapaapalaute' cols='100' rows='5'></textarea><br>
-
+        <!--alla oleva koodi lähettää palautteen tietokantaan jos painaa lähetä, tyhjennä tyhjentää palautelaatikot-->
     <input type="submit" name="ok" value="Lähetä"/>
     <input type="reset" name="eiok" value="Tyhjennä"/>
     </form>
     <footer>
+        <!--Janica Närhi made footer-->
     <div class="container">
           <div class="row">
             <div class="col one">

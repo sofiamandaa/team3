@@ -1,5 +1,5 @@
 Kiitos palautteesta!
-<a class="navrr" href="index.html">Palaa etusivulle</a>
+<a class="navrr" href="kirjauduulos.php">Kirjaudu ulos</a>
 <?php 
 $nimi="";
 if (isset($_POST["nimi"])){

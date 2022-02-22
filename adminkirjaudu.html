@@ -37,9 +37,6 @@
 				<li class="nav-item">
 					<a class="navrr" href="contact.html">Contact</a>
 				</li>
-				<li class="nav-item">
-				 <a class="navrr" href="luepalaute.php">Feedback</a>
-			 </li>
 			</ul>
 	</div>
 	</nav>
@@ -47,7 +44,7 @@
 <script>
 function lahetaKayttaja(lomake){
 	var user=new Object();
-	user.kayttajatunnus=lomake.kayttajatunnus.value;
+	user.tunnus=lomake.tunnus.value;
 	user.salasana=lomake.salasana.value;
 	var jsonUser=JSON.stringify(user);
 	
@@ -55,32 +52,33 @@ function lahetaKayttaja(lomake){
 	xmlhttp.onreadystatechange = function() {
 	  if (this.readyState == 4 && this.status == 200) {
 		    if (this.responseText=="ok"){
-		    	window.location.assign("./palautelomake.html");
+		    	window.location.assign("./admin.php");
 		    }
 		    else{
 			    document.getElementById("result").innerHTML = this.responseText;
 		    }
 	  }
 	};
-	xmlhttp.open("POST", "./kirjauduajax.php", true);
+	xmlhttp.open("POST", "./adminkirjaudu.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("user=" + jsonUser);	
 }
 </script>
 
 
-<h2>Kirjaudu sisään</h2>
-<p>Ole hyvä ja syötä alle käyttäjätunnus ja salasana kirjautuaksesi sisään.</p>
+<h2>Ylläpito</h2>
 <p>&#160</p>
 <form id='userlomake'>
 <p>
-<b>Käyttäjätunnus: </b> <input type='text' name='kayttajatunnus' value='' placeholder='Käyttäjätunnus...'><br>
+<b>Tunnus: </b> <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'><br>
 <b>Salasana: </b> <input type='password' name='salasana' value='' placeholder='Salasana...'></p><br>
 <input type='button' name='ok' value='Kirjaudu' onclick='lahetaKayttaja(this.form);'>
-<input type="reset" name="tyhjenna" value='Nollaa'>
+<input type='reset' name='tyhjenna' value='Nollaa'>
 <p>&#160</p>
-<p>Eikö sinulla ole käyttäjää? <a href="rekisteroidy.html">Rekisteröidy täältä</a>.</p>
+<p><a href="adminrekisteroidy.html">Rekisteröidy täältä</a></p>
 </form>
+<p id='result'>
+</p>
 
 <footer>
     <div class="container">
@@ -111,4 +109,3 @@ function lahetaKayttaja(lomake){
   </footer>
 </body>
 </html>
-

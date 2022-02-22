@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 20, 2022 at 01:25 PM
+-- Generation Time: Feb 21, 2022 at 01:19 PM
 -- Server version: 8.0.26
 -- PHP Version: 8.0.15
 
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `dining007`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int NOT NULL,
+  `tunnus` varchar(200) NOT NULL,
+  `salasana` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -47,7 +59,8 @@ CREATE TABLE `asiakas` (
 --
 
 INSERT INTO `asiakas` (`id`, `etunimi`, `sukunimi`, `puhelinnro`, `sposti`, `kayttajatunnus`, `salasana`, `katuosoite`, `postinumero`, `postitoimipaikka`, `ika`, `kayttaja_tyyppi`) VALUES
-(1, 'joo', 'joo', 123, 'joo', 'joo', 'a2e882c6adfe06c527ff0c58d4cf8919513d11e933694e3e5120873682158fc8', 'joo', 123, 'joo', 123, NULL);
+(1, 'joo', 'joo', 123, 'joo', 'joo', 'a2e882c6adfe06c527ff0c58d4cf8919513d11e933694e3e5120873682158fc8', 'joo', 123, 'joo', 123, NULL),
+(2, 'Aku', 'Ankka', 501234567, 'akuankka@ankkalinna.fi', 'Aankka', 'f163256800aa49f3d191ddceb9188ddeab2f84c85dd59212921ceada9bbac2e5', 'Ankkalinnantie 2', 11111, 'Ankkalinna', 22, NULL);
 
 -- --------------------------------------------------------
 
@@ -71,11 +84,18 @@ INSERT INTO `palaute` (`nimi`, `asiakaspalvelu`, `ruoka`, `Vapaapalaute`) VALUES
 ('', '', '', ''),
 ('', '', '', ''),
 ('', '', '', ''),
-('Hessu', 'Hyvin.', 'Hyvää', 'Hieno paikka.');
+('Hessu', 'Hyvin.', 'Hyvää', 'Hieno paikka.'),
+('aku', 'hyvä hyvä', 'maukasta', 'hieno paikka');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `asiakas`
@@ -88,10 +108,16 @@ ALTER TABLE `asiakas`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `asiakas`
 --
 ALTER TABLE `asiakas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

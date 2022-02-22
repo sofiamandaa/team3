@@ -82,8 +82,8 @@ catch(Exception $e){
 $tulos=mysqli_query($yhteys, "select * from palaute");
 print "<ol>";
 while ($rivi=mysqli_fetch_object($tulos)){
-    print "Asiakaspalvelu: $rivi->asiakaspalvelu<br>";
-    print "Ruoka: $rivi->ruoka<br>";
+    print "Miten onnistuimme asiakaspalvelussa?: $rivi->asiakaspalvelu<br>";
+    print "Miten onnistuimme ruoassa?: $rivi->ruoka<br>";
     print "Vapaa palaute: $rivi->Vapaapalaute<br><br>";
 }
 print "</ol>";

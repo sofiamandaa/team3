@@ -12,9 +12,7 @@
 		 width: 1300px;
 		 font-family: 'Times New Roman', Times, serif;
 		}
-	button{
-		border-top: 30px;
-	}
+
 </style>
 </head>
 <body>
@@ -51,13 +49,17 @@ function lahetaKayttaja(lomake){
 	user.salasana=lomake.salasana.value;
 	var jsonUser=JSON.stringify(user);
 	
+	//Luodaan http-pyyntö -olio, jolla sitten tehdään varsinainen http-pyyntö.
 	xmlhttp = new XMLHttpRequest();
+	//Kun http-pyynnön tila muuttuu, tätä funktiota kutsutaan.
 	xmlhttp.onreadystatechange = function() {
+	//Jos pyynnön tila on "onnistunut" (200) ja pyyntö on "valmis" (4) eli response on tullut perille.
 	  if (this.readyState == 4 && this.status == 200) {
 		    if (this.responseText=="ok"){
 		    	window.location.assign("./palautelomake.html");
 		    }
 		    else{
+				//Dokumentin elementin 'result' sisällöksi laitetaan KAIKKI mitä palvelinohjelma kirjauduajax.php tulostaa.
 			    document.getElementById("result").innerHTML = this.responseText;
 		    }
 	  }

@@ -1,6 +1,7 @@
 Kiitos palautteesta!
 <a class="navrr" href="kirjauduulos.php">Kirjaudu ulos</a>
-<?php 
+<?php
+
 //jos laatikot ovat täytetty, alla oleva koodi lähettää ne tietokantaan, jos ei ole täytetty niin mitään ei lähetetä
 $nimi="";
 if (isset($_POST["nimi"])){
@@ -20,8 +21,6 @@ $vapaapalaute="";
 if (isset($_POST["vapaapalaute"])){
    $vapaapalaute=$_POST["vapaapalaute"];
 }
-
-
 
 //yhdistää tietokantaan yhteyden, jos epäonnistuu tulee error viesti
 $yhteys=mysqli_connect("db", "root", "password", "dining007");
